@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Test">
+
+        <EditTextPreference
+            android:title="CS330 je sifra kog predmeta?"
+            android:selectable="false"
+            />
+
+        <CheckBoxPreference
+            android:title="Razvoj mobilnih aplikacija"
+            android:defaultValue="false"
+            android:key="btn1" />
+        <CheckBoxPreference
+            android:title="Veb sistemi 1"
+            android:defaultValue="false"
+            android:key="btn2" />
+        <CheckBoxPreference
+            android:title="Operativni sistemi"
+            android:defaultValue="false"
+            android:key="btn3" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Univerzitet info">
+        <PreferenceScreen
+            android:key="second_preferencescreen"
+            android:title="Drugi ekran">
+
+            <EditTextPreference
+                android:title="Naziv fakulteta"
+                android:summary="Unesite tekst"
+                />
+            <EditTextPreference
+                android:title="Adresa fakulteta"
+                android:summary="Unesite tekst"
+                />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
