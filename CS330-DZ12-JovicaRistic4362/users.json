@@ -1,0 +1,86 @@
+{
+  "uuid": "2bb4aafa-fcb3-4b58-9839-2081b67a4240",
+  "lastMigration": 27,
+  "name": "Users",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "8a780897-809f-423d-b940-2e3888d750b0",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "user",
+      "responses": [
+        {
+          "uuid": "6c689640-f9ba-48f4-8213-3737a9b4d9fd",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "xekx",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "8a780897-809f-423d-b940-2e3888d750b0"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "85c4284e-ee06-4dd2-a735-8aa36557b532",
+      "id": "xekx",
+      "name": "user",
+      "documentation": "",
+      "value": "[\r\n  {{#repeat 5}}\r\n  {\r\n    \"id\": \"{{faker 'datatype.uuid'}}\",\r\n    \"username\": \"{{faker 'internet.userName'}}\",\r\n    \"avatar\": \"{{faker 'image.avatar'}}\",\r\n    \"grad\": \"{{faker 'address.city'}}\",\r\n    \"drzava\": \"{{faker 'address.country'}}\",\r\n    \"pol\": \"{{faker 'name.sexType'}}\",\r\n    \"zainteresovanPol\": \"{{faker 'name.sexType'}}\",\r\n    \"opis\": \"{{faker 'lorem.sentence'}}\"\r\n  }\r\n  {{/repeat}}\r\n]"
+    }
+  ]
+}
